@@ -8,6 +8,7 @@ tst = trt.Turtle()
 
 t.speed(9)
 t1.speed(9)
+
 t.pu()
 t.goto(530, -295)
 
@@ -52,7 +53,7 @@ while i < 16:
      
 
 
-print(t.position())  
+# print(t.position())  
 
 t.pu()
 t.goto(-100, -296)
@@ -284,12 +285,340 @@ x,y = 232, -300
 x1,y1 = 140, -300
 tower()
 
+
+x,y = -140, -300
+x1,y1 = -232, -300
+
+def tower():
+    t.speed(9)
+    t1.speed(9)
+    t.up()
+    t1.up()
+    t.goto(x, y)
+    t1.goto(x1, y1)
+    t.pd()
+    t1.pd()
+    t.seth(93)
+    t.fd(255)
+    t1.seth(87)
+    t1.fd(255)
+    
+    t.rt(35)
+    t.fd(35)
+    t1.lt(35)
+    t1.fd(35)
+    t.seth(90)
+    t.fd(35)
+    t1.seth(90)
+    t1.fd(35)
+    
+    t.seth(180)
+    t.fd(10)
+    t.seth(265)
+    t.fd(12)
+    t.seth(180)
+    t.fd(8)
+    t.seth(92)
+    t.fd(14)
+    t.seth(180)
+    t.fd(20)
+    t.seth(260)
+    t.fd(12)
+    t.seth(180)
+    t.fd(13)
+    
+    t1.seth(0)
+    t1.fd(10)
+    t1.seth(265)
+    t1.fd(12)
+    t1.seth(0)
+    t1.fd(10)
+    t1.seth(92)
+    t1.fd(14)
+    t1.seth(0)
+    t1.fd(25)
+    t1.seth(280)
+    t1.fd(12)
+    t1.seth(0)
+    t1.fd(13)
+    
+    print(t1.position())
+    
+    t.pu()
+    t.goto(x-1,y+319)
+    t1.pu()
+    t1.goto(x-90, y+319)
     
     
     
+    a = 0
+    b = 0
+    for k in range(4):
+        t.begin_fill()
+        t.pd()
+        t.rt(35-a)
+        t.fd(10 + b)
+        t1.pd()
+        t1.lt(35-a)
+        t1.fd(10 + b)
+        a += 13
+        b += 8
+    t1.seth(90)
+    t1.fd(3)
+    t1.fd(25)
+    t1.circle(2, extent = 360)
+    t1.fd(20)
+
+    t.pu()
+    t1.pu()
+    t1.goto(x-12, y+230)
+    t1.seth(180)
+    t1.pd()
+    t1.fd(67)
+    t1.seth(266)
+    t1.fd(10)
+    t1.seth(0)
+    t1.fd(69)
+    t1.seth(95)
+    t1.fd(0)
+    t1.hideturtle ()
+   
+   
+x,y = -140, -300
+x1,y1 = -232, -300
+
+def tower1():
+    t.speed(9)
+    t1.speed(9)
+    t.up()
+    t1.up()
+    t.goto(x, y)
+    t1.goto(x1, y1)
+    t.pd()
+    t1.pd()
+    t.seth(93)
+    t.fd(255)
+    t1.seth(87)
+    t1.fd(255)
+    
+    t.rt(35)
+    t.fd(35)
+    t1.lt(35)
+    t1.fd(35)
+    t.seth(90)
+    t.fd(35)
+    t1.seth(90)
+    t1.fd(35)
+    
+    t.seth(180)
+    t.fd(10)
+    t.seth(265)
+    t.fd(12)
+    t.seth(180)
+    t.fd(8)
+    t.seth(92)
+    t.fd(14)
+    t.seth(180)
+    t.fd(20)
+    t.seth(260)
+    t.fd(12)
+    t.seth(180)
+    t.fd(13)
+    
+    t1.seth(0)
+    t1.fd(10)
+    t1.seth(265)
+    t1.fd(12)
+    t1.seth(0)
+    t1.fd(10)
+    t1.seth(92)
+    t1.fd(14)
+    t1.seth(0)
+    t1.fd(25)
+    t1.seth(280)
+    t1.fd(12)
+    t1.seth(0)
+    t1.fd(13)
+    
+    # print(t1.position())
+    
+    t.pu()
+    t.goto(x-1,y+349)
+    t1.pu()
+    t1.goto(x-90, y+349)
     
     
     
+    a = 0
+    b = 0
+    for k in range(4):
+        t.begin_fill()
+        t.pd()
+        t.rt(35-a)
+        t.fd(10 + b)
+        t1.pd()
+        t1.lt(35-a)
+        t1.fd(10 + b)
+        a += 13
+        b += 8
+    t1.seth(90)
+    t1.fd(3)
+    t1.fd(25)
+    t1.circle(2, extent = 360)
+    t1.fd(20)
+
+    t.pu()
+    t1.pu()
+    t1.goto(x-12, y+230)
+    t1.seth(180)
+    t1.pd()
+    t1.fd(67)
+    t1.seth(266)
+    t1.fd(10)
+    t1.seth(0)
+    t1.fd(69)
+    t1.seth(95)
+    t1.fd(0)
+    t1.hideturtle ()
+   
+
+
+
+tower1()
+      
     
+    
+    
+# def design(x, y):
+#     t.seth(0)
+#     t.speed(9)
+#     t.pu()
+#     t.goto(x, y)
+#     t.pd()
+#     t.speed(9)
+#     t.color('black', 'yellow')
+#     t.begin_fill()
+#     t.fd(70)
+#     t.circle(2, extent=180)
+#     t.fd(70)
+#     t.circle(2, extent=180)
+    
+#     for x in range(7):
+#         t.fd(2)
+#         t.seth(270)
+#         t.fd(4)
+#         t.seth(0)
+#         t.fd(5)
+#         t.seth(90)
+#         t.fd(4)
+#         t.seth(0)
+#         t.fd(3)
+    
+    
+#     t.pu()    
+#     t.circle(3, extent=180)
+#     for y in range (7):
+#         t.fd(2)
+#         t.pd()
+#         t.seth(90)
+#         t.fd(4)
+#         t.seth(180)
+#         t.fd(5)
+#         t.seth(270)
+#         t.fd(4)
+#         t.seth(180)
+#         t.fd(3)
+#     t.end_fill()
+    
+    
+
+
+# def circle(x, y, a ):
+#     t.speed(9)
+#     t.pen(pencolor='yellow', pensize=a)
+#     t.pu()
+#     t.goto(x, y)
+#     t.pd()  
+#     t.circle(3, extent=360)
+#     t.pen(pencolor='black', pensize=a-1)
+#     t.circle(4, extent=360, steps=20)
+#     t.hideturtle()
+
+    
+
+# def cone(x, y):
+#     t.speed(9)
+#     t.pu()
+#     t.goto(x, y)
+#     t.pd()
+#     t.width(2)
+#     t.color('black','blue')
+#     t.begin_fill()
+#     t.seth(150)
+#     t.circle(80, extent=60)
+#     t.seth(45)
+#     t.circle(140, extent=40)
+#     t.seth(275)
+#     t.circle(140, extent=40)
+#     t.end_fill()
+#     circle(-42, 87, 3)
+#     t.pu()
+#     t.fd(4)
+#     t.seth(90)
+#     t.fd(10)
+#     t.pd()
+#     t.fd(25)
+    
+#     t.pu()
+#     t.goto(x-65,y+6)
+#     t.color('black', 'red')
+#     t.begin_fill()
+#     t.pd()
+#     t.seth(270)
+#     t.fd(18)
+#     t.seth(0)
+#     t.pu()
+#     t.fd(48)
+#     t.pd()
+#     t.seth(90)
+#     t.fd(18)
+#     t.end_fill()
+    
+#     t.pu()
+#     t.goto(x-65, y-27)
+#     t.pd()
+#     t.seth(265)
+#     t.fd(150)
+#     t.pu()
+#     t.goto(x-17, y-27)
+#     t.pd()
+#     t.seth(275)
+#     t.fd(150)
+    
+    
+    
+# def triangle(a, b, x):
+#     t.pu()
+#     t.goto(a, b)
+#     t.seth(0)
+#     t.pd()
+#     t.color('black', 'yellow')
+#     t.begin_fill()
+#     t.fd(x)
+#     t.seth(120)
+#     t.fd(x)
+#     t.seth(240)
+#     t.fd(x)
+#     t.end_fill()
+#     t.hideturtle()
+
+# def tower1():
+#     design(-76, -23)
+#     cone(0, 0)
+#     triangle(-44, 77, 9)
+    
+
+
+# tower1()
 trt.done()
 
