@@ -1,10 +1,51 @@
 import turtle
 
+
+turtle.bgcolor('light blue')
 t1 = turtle.Turtle()
 t2 = turtle.Turtle()
 
-# t1.color('red')
-# t2.color('blue')
+def cloud(x, y):
+    t1.color('white', "white")
+    t1.pu()
+    t1.goto(x, y)
+    t1.pd()
+    t1.begin_fill()
+    t1.circle(10, 180)
+    t1.rt(100)
+    t1.circle(15, 150)
+    t1.rt(100)
+    t1.circle(15, 180)
+    t1.rt(100)
+    t1.circle(15, 200)
+    t1.rt(70)
+    t1.circle(15, 60)
+    t1.rt(70)
+    t1.circle(15, 100)
+    t1.end_fill()
+
+
+    
+# cloud(-100, 200)
+# cloud(-150, 250)
+# cloud(-500, 250)
+# cloud(450, 230)
+# cloud(490, 230)
+# cloud(200, 250)
+# cloud(300, 40)
+# cloud(550, 40)
+# cloud(-300, 100)
+
+
+    
+    
+    
+    
+
+
+
+t1.color('black')
+t2.color('black')
 
 def curve(x, y, z):
         for x in range(x):
@@ -197,6 +238,16 @@ def tower(x, y):
     t1.pd()
     t2.pd()
     curve(5, 10.5, 5)
+    
+    t1.pu()
+    t2.pu()
+    t1.goto(322, y-475)
+    t2.goto(322, y-475)
+    t1.seth(180)
+    t2.seth(0)
+    t1.pd()
+    t2.pd()
+    curve(5,7.3, 2)
     
     t1.pu()
     t1.goto(x+319, y-75)
@@ -445,16 +496,155 @@ def door(x, y):
     t1.circle(5, extent=180, steps=10)
     t1.fd(16)
     
+def tree(x, y, color):
+    # turtle.tracer(0, 0)
+    t1.pu()
+    t1.goto(x, y)
+    t1.pd()
+    t1.color(color, color)
+    t1.begin_fill()
+    t1.seth(70)
+    t1.fd(10)
+    t1.seth(180)
+    t1.fd(15)
+    t1.seth(30)
+    t1.fd(20)
+    t1.seth(170)
+    t1.fd(10)
+    t1.seth(30)
+    t1.fd(15)
+    t1.lt(20)
+    t1.fd(10)
+    t1.seth(185)
+    t1.fd(13)
+    t1.seth(30)
+    t1.fd(15)
+    t1.lt(50)
+    t1.fd(5)
+    t1.seth(185)
+    t1.fd(8)
+    t1.seth(40)
+    t1.fd(15)
+    t1.seth(80)
+    t1.fd(10)
+    
+    t1.seth(280)
+    t1.fd(10)
+    t1.seth(300)
+    t1.fd(10)
+    t1.seth(160)
+    t1.fd(5)
+    t1.seth(290)
+    t1.fd(8)
+    t1.seth(320)
+    t1.fd(10)
+    t1.seth(170)
+    t1.fd(10)
+    t1.seth(290)
+    t1.fd(5)
+    t1.lt(20)
+    t1.fd(20)
+    t1.seth(170)
+    t1.fd(15)
+    t1.seth(320)
+    t1.fd(25)
+    t1.seth(165)
+    t1.fd(15)
+    t1.seth(285)
+    t1.fd(10)
+    t1.end_fill()
+    
+    t1.hideturtle()
+    
+t1.speed(19)  
+tree(530, -200, 'green')
+tree(550, -220, 'green')
+tree(580, -230, 'green')
+
+def bush(x, y, color):
+    t1.speed(19)
+    t1.pu()
+    t1.goto(x, y)
+    t1.pd()
+    t1.color(color, color)
+    t1.begin_fill()
+    t1.circle(5, extent=90)
+    t1.seth(90)
+    t1.circle(5, extent=120)
+    t1.seth(90)
+    t1.circle(5, extent=180)
+    t1.seth(90)
+    t1.circle(5, extent=220)
+    t1.seth(180)
+    t1.circle(6, extent=200)
+    t1.seth(270)
+    t1.circle(5, extent=230)
+    t1.seth(270)
+    t1.circle(6, extent=200)
+    t1.end_fill()
+    
+bush(380, -225, 'green')
+bush(365, -225, 'green')
+bush(415, -240, 'green')
+bush(445, -235, 'green')
+bush(475, -245, 'green')
+bush(505, -250, 'green')
+
+
+
+
+bush(340, -215, 'green')
+bush(320, -200, 'green')
+bush(295, -215, 'green')
+
+
+
+
+        
+
+
+
+def fence(x, y, z):
+    a = 7
+    b = 7
+    t1.pu()
+    t1.goto(x, y)
+    for c in range(z):
+        t1.pu()
+        t1.goto(x+a, y-b)
+        t1.pd()
+        t1.seth(90)
+        t1.fd(15)
+        t1.pu()
+        t1.bk(5)
+        t1.seth(160)
+        t1.pd()
+        t1.fd(16)
+        t1.pu()
+        t1.bk(16)
+        t1.seth(270)
+        t1.fd(4)
+        t1.seth(160)
+        t1.pd()
+        t1.fd(16)
+        
+        a += 15
+        b += 5
+    
+t1.speed(9)
+fence(540, -235, 5)
+fence (605, -265, 2)
+
+
+
+# t1.hideturtle()
+# t2.hideturtle()
+
+    
     
 
-
-t1.hideturtle()
-t2.hideturtle()
-
-    
-    
-
-
+t1.color('black')
+t1.color('black')
 
 tower(350, 275)
 house(470,-120)   
