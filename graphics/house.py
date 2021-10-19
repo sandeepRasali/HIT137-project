@@ -1,9 +1,255 @@
 import turtle
+import random
 
 
 turtle.bgcolor('light blue')
 t1 = turtle.Turtle()
 t2 = turtle.Turtle()
+
+t1.speed(19)
+
+def randomLine(x, y, a, b):
+        for c in range(x):
+            t1.seth(random.randint(a, b))
+            t1.fd(y)
+            
+###################### sea ###############
+t1.color('black', 'blue')
+t1.pu()
+t1.goto(230, -350)
+t1.seth(90)
+t1.begin_fill()
+t1.fd(100)
+t1.goto(230, -250)
+t1.pd()
+t1.seth(80)
+randomLine(35, 25, 175, 185)
+t1.seth(270)
+t1.fd(100)
+t1.end_fill()
+
+def boat(x, y):
+    t1.width(2)
+    t1.color('black', 'white')
+    t1.pu()
+    t1.goto(x, y)
+    t1.pd()
+    t1.begin_fill()
+    t1.fd(15)
+    t1.seth(0)
+    t1.circle(400, extent=15)
+    t1.seth(45)
+    t1.circle(60, extent=25)
+    t1.pu()
+    t1.goto(x, y)
+    t1.seth(0)
+    t1.pd()
+    t1.circle(400, extent=15)
+    
+    t1.lt(10)
+    t1.fd(16)
+    t1.pu()
+    t1.goto(x, y)
+    t1.seth(160)
+    t1.pd()
+    t1.fd(15)
+    
+    t1.seth(270)
+    t1.fd(15)
+    t1.seth(280)
+    t1.circle(8, extent=115)
+    t1.end_fill()
+    
+    t1.pu()
+    t1.goto(x, y)
+    t1.begin_fill()
+    t1.seth(160)
+    t1.fd(15)
+    t1.goto(-314.10, -244.87)
+    t1.pd()
+    t1.seth(0)
+    t1.circle(400, extent=5)
+    t1.seth(270)
+    t1.pu()
+    t1.fd(5)
+    t1.end_fill()
+    
+    t1.begin_fill()
+    t1.pd()
+    
+    t1.seth(50)
+    t1.fd(8)
+    t1.rt(10)
+    t1.fd(5)
+    t1.seth(15)
+    t1.fd(20)
+    t1.seth(355)
+    t1.fd(10)
+    print(t1.position())
+    t1.seth(350)
+    t1.fd(20)
+    t1.seth(12)
+    t1.fd(33)
+    t1.end_fill()
+    
+    t1.width(1)
+    t1.pu()
+    t1.goto(-235, -235)
+    t1.pd()
+    t1.color('black', 'red')
+    t1.begin_fill()
+    t1.seth(90)
+    t1.fd(15)
+    t1.seth(180)
+    t1.fd(5)
+    t1.seth(270)
+    t1.fd(15)
+    t1.end_fill()
+    
+    t1.color('black', 'white')
+    t1.pu()
+    t1.bk(15)
+    t1.seth(180)
+    t1.pd()
+    t1.begin_fill()
+    randomLine(9, 7, 180, 200)
+    t1.seth(45)
+    t1.circle(250, extent=40)
+    t1.seth(268)
+    t1.fd(145)
+    t1.pu()
+    t1.fd(13)
+    t1.seth(45)
+    t1.pd()
+    t1.fd(5)
+    t1.seth(89.2)
+    t1.fd(145)
+    t1.seth(270)
+    t1.circle(300, extent=30)
+    t1.seth(160)
+    t1.fd(45)
+    t1.end_fill()
+    
+    t1.width(2)
+    t1.color('black', 'black')
+    t1.pu()
+    t1.goto(-265, -240)
+    t1.seth(270)
+    t1.pd()
+    t1.fd(7)
+    t1.pu()
+    t1.goto(-240, -235)
+    t1.begin_fill()
+    t1.seth(275)
+    t1.pd()
+    t1.fd(10)
+    t1.pu()
+    t1.seth(190)
+    t1.fd(18)
+    t1.seth(90)
+    t1.fd(10)
+    t1.end_fill()
+    
+    
+    
+    
+    
+    t1.begin_fill()
+    t1.end_fill()
+    
+   
+    
+    
+    
+
+    
+    
+    t1.hideturtle()
+    
+    
+
+boat(-300, -250)
+            
+def base():    
+    t1.pu()
+    t1.goto(230.51, -240.88)
+    t1.color('black', 'brown')
+    t1.pd()
+    t1.begin_fill()
+    randomLine(2, 5, 190, 200)
+    randomLine(5, 5, 220, 260)
+    randomLine(5, 5, 200, 210)
+    randomLine(5, 5, 230, 240)
+    randomLine(5, 5, 200, 220)
+    randomLine(5, 5, 230, 240)
+    t1.seth(0)
+    t1.fd(200)
+    t1.end_fill()
+    
+    t1.pu()
+    t1.color('black', 'black')
+    t1.goto(220, -260)
+    t1.pd()
+    t1.begin_fill()
+    randomLine(3, 6, 240, 250)
+    randomLine(3, 6, 190, 200)
+    randomLine(3, 6, 210, 225)
+    randomLine(4, 10, 230, 245)
+    t1.end_fill()
+    
+    t1.pu()
+    t1.goto(230, -280)
+    t1.pd()
+    t1.begin_fill()
+    randomLine(5, 6, 250, 260)
+    randomLine(3, 6, 190, 210)
+    randomLine(3, 6, 200, 225)
+    randomLine(3, 6, 240, 260)
+    t1.end_fill()
+    
+    t1.pu()
+    t1.goto(240, -295)
+    t1.pd()
+    t1.begin_fill()
+    randomLine(3, 6, 250, 270)
+    randomLine(3, 6, 190, 230)
+    randomLine(4, 6, 230, 240)
+    randomLine(3, 6, 250, 265)
+    t1.end_fill()
+    
+    
+    
+    
+    
+    t1.color('black', 'orange') 
+    t1.up()
+    t1.goto(640, -325)
+    t1.pd()
+    t1.begin_fill()
+    t1.seth(90)
+    t1.fd(100)
+    t1.seth(160)
+    t1.fd(20)
+    randomLine(20, 5, 150, 170)
+    t1.seth(185)
+    t1.pu()
+    t1.fd(250)
+    t1.pd()
+    randomLine(10, 6, 200, 220)
+    t1.seth(230)
+    t1.fd(5)
+    t1.seth(260)
+    t1.fd(10)
+    randomLine(10, 5, 280, 290)
+    randomLine(5, 5, 320, 330)
+    randomLine(15, 5, 340, 350)
+    t1.end_fill()
+
+t1.speed(19)
+
+base()
+
+
 
 def cloud(x, y):
     t1.color('white', "white")
@@ -26,15 +272,15 @@ def cloud(x, y):
 
 
     
-# cloud(-100, 200)
-# cloud(-150, 250)
-# cloud(-500, 250)
-# cloud(450, 230)
-# cloud(490, 230)
-# cloud(200, 250)
-# cloud(300, 40)
-# cloud(550, 40)
-# cloud(-300, 100)
+cloud(-100, 200)
+cloud(-150, 250)
+cloud(-500, 250)
+cloud(450, 230)
+cloud(490, 230)
+cloud(200, 250)
+cloud(300, 40)
+cloud(550, 40)
+cloud(-300, 100)
 
 
     
@@ -497,7 +743,7 @@ def door(x, y):
     t1.fd(16)
     
 def tree(x, y, color):
-    # turtle.tracer(0, 0)
+    turtle.tracer(0, 0)
     t1.pu()
     t1.goto(x, y)
     t1.pd()
@@ -637,8 +883,8 @@ fence (605, -265, 2)
 
 
 
-# t1.hideturtle()
-# t2.hideturtle()
+t1.hideturtle()
+t2.hideturtle()
 
     
     
@@ -649,6 +895,7 @@ t1.color('black')
 tower(350, 275)
 house(470,-120)   
 smallHouse(513, -187)
+
 window1(340, -130 , 32, 24, 2)
 window1(370, 40, 23, 18, 1.5)
 window1(350, 180, 15, 10, 1)
