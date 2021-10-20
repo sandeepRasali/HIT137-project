@@ -743,7 +743,7 @@ def door(x, y):
     t1.fd(16)
     
 def tree(x, y, color):
-    turtle.tracer(0, 0)
+    # turtle.tracer(0, 0)
     t1.pu()
     t1.goto(x, y)
     t1.pd()
