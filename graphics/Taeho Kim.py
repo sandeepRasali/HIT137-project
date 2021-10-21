@@ -1,7 +1,6 @@
 import turtle
 import random
-##teddy
-
+#TESTIng
 turtle.bgcolor('light blue')
 t1 = turtle.Turtle()
 t2 = turtle.Turtle()
