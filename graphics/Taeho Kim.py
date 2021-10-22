@@ -741,71 +741,71 @@ def door(x, y):
     t1.circle(5, extent=180, steps=10)
     t1.fd(16)
     
-def tree(x, y, color):
-    turtle.tracer(0, 0)
-    t1.pu()
-    t1.goto(x, y)
-    t1.pd()
-    t1.color(color, color)
-    t1.begin_fill()
-    t1.seth(70)
-    t1.fd(10)
-    t1.seth(180)
-    t1.fd(15)
-    t1.seth(30)
-    t1.fd(20)
-    t1.seth(170)
-    t1.fd(10)
-    t1.seth(30)
-    t1.fd(15)
-    t1.lt(20)
-    t1.fd(10)
-    t1.seth(185)
-    t1.fd(13)
-    t1.seth(30)
-    t1.fd(15)
-    t1.lt(50)
-    t1.fd(5)
-    t1.seth(185)
-    t1.fd(8)
-    t1.seth(40)
-    t1.fd(15)
-    t1.seth(80)
-    t1.fd(10)
-    
-    t1.seth(280)
-    t1.fd(10)
-    t1.seth(300)
-    t1.fd(10)
-    t1.seth(160)
-    t1.fd(5)
-    t1.seth(290)
-    t1.fd(8)
-    t1.seth(320)
-    t1.fd(10)
-    t1.seth(170)
-    t1.fd(10)
-    t1.seth(290)
-    t1.fd(5)
-    t1.lt(20)
-    t1.fd(20)
-    t1.seth(170)
-    t1.fd(15)
-    t1.seth(320)
-    t1.fd(25)
-    t1.seth(165)
-    t1.fd(15)
-    t1.seth(285)
-    t1.fd(10)
-    t1.end_fill()
-    
-    t1.hideturtle()
-    
-t1.speed(19)  
-tree(530, -200, 'green')
-tree(550, -220, 'green')
-tree(580, -230, 'green')
+def tree(length, pen_size):
+    angle = random.randint(15, 30)
+    branch = random.uniform(0.6, 0.9)
+    r_color = random.choice(color_list)
 
+    if length < 15 :
+        t1.color(r_color)
+        t1.stamp()
+        t1.color("brown")
+
+    if length > 7:
+        t1.pensize(pen_size)
+        pen_size *= 0.7
+        t1.fd(length)
+        t1.left(angle)
+        tree(length * branch, pen_size)
+        t1.right(angle * 2)
+        tree(length * branch, pen_size)
+        t1.left(angle)
+        t1.backward(length)
+
+color_list = ["green", "darkgreen", "greenyellow", "forestgreen", "yellowgreen"]
+t1.speed(19)
+t1.setheading(90)
+t1.up()
+t1.goto(530, -200)
+t1.down()
+t1.color("brown")
+
+tree(40, 9)
+
+
+def tree(length, pen_size):
+    angle = random.randint(15, 30)
+    branch = random.uniform(0.6, 0.9)
+    r_color = random.choice(color_list)
+
+    if length < 15 :
+        t1.color(r_color)
+        t1.stamp()
+        t1.color("brown")
+
+    if length > 7:
+        t1.pensize(pen_size)
+        pen_size *= 0.7
+        t1.fd(length)
+        t1.left(angle)
+        tree(length * branch, pen_size)
+        t1.right(angle * 2)
+        tree(length * branch, pen_size)
+        t1.left(angle)
+        t1.backward(length)
+
+color_list = ["green", "darkgreen", "greenyellow", "forestgreen", "yellowgreen"]
+
+t1.setheading(90)
+t1.up()
+t1.goto(600, -220)
+t1.down()
+t1.color("brown")
+
+tree(40, 9)
+##tree(530, -200, 'green')
+##tree(550, -220, 'green')
+##tree(580, -230, 'green')
 def bush(x, y, color):
     t1.speed(19)
     t1.pu()
@@ -843,6 +843,289 @@ bush(320, -200, 'green')
 bush(295, -215, 'green')
 
 
+def petal():
+    for i in range(2):
+        t1.circle(6, 110)
+        t1.left(70)
+t1.color("white")
+t1.goto(295, -215)
+t1.begin_fill()
+for i in range(6):
+    petal()
+    t1.left(360/6)
+t1.end_fill()
+
+t1.goto(299, -215)
+t1.color("yellow")
+t1.begin_fill()
+t1.circle(4)
+t1.end_fill()
+t1.hideturtle()
+
+
+def petal():
+    for i in range(2):
+        t1.circle(6, 110)
+        t1.left(70)
+t1.color("yellow")
+t1.pu()
+t1.goto(305, -205)
+t1.pd()
+t1.begin_fill()
+for i in range(6):
+    petal()
+    t1.left(360/6)
+t1.end_fill()
+
+t1.goto(309, -205)
+t1.color("white")
+t1.begin_fill()
+t1.circle(4)
+t1.end_fill()
+t1.hideturtle()
+
+
+def petal():
+    for i in range(2):
+        t1.circle(6, 110)
+        t1.left(70)
+t1.color("red")
+t1.pu()
+t1.goto(320, -230)
+t1.pd()
+t1.begin_fill()
+for i in range(6):
+    petal()
+    t1.left(360/6)
+t1.end_fill()
+
+t1.goto(324, -230)
+t1.color("yellow")
+t1.begin_fill()
+t1.circle(4)
+t1.end_fill()
+t1.hideturtle()
+
+
+def petal():
+    for i in range(2):
+        t1.circle(6, 110)
+        t1.left(70)
+t1.color("yellow")
+t1.pu()
+t1.goto(335, -215)
+t1.pd()
+t1.begin_fill()
+for i in range(6):
+    petal()
+    t1.left(360/6)
+t1.end_fill()
+
+t1.goto(339, -215)
+t1.color("white")
+t1.begin_fill()
+t1.circle(4)
+t1.end_fill()
+t1.hideturtle()
+
+
+def petal():
+    for i in range(2):
+        t1.circle(6, 110)
+        t1.left(70)
+t1.color("yellow")
+t1.pu()
+t1.goto(350, -230)
+t1.pd()
+t1.begin_fill()
+for i in range(6):
+    petal()
+    t1.left(360/6)
+t1.end_fill()
+
+t1.goto(354, -230)
+t1.color("white")
+t1.begin_fill()
+t1.circle(4)
+t1.end_fill()
+t1.hideturtle()
+
+
+def petal():
+    for i in range(2):
+        t1.circle(6, 110)
+        t1.left(70)
+t1.color("red")
+t1.pu()
+t1.goto(360, -240)
+t1.pd()
+t1.begin_fill()
+for i in range(6):
+    petal()
+    t1.left(360/6)
+t1.end_fill()
+
+t1.goto(364, -240)
+t1.color("yellow")
+t1.begin_fill()
+t1.circle(4)
+t1.end_fill()
+t1.hideturtle()
+
+
+def petal():
+    for i in range(2):
+        t1.circle(6, 110)
+        t1.left(70)
+t1.color("yellow")
+t1.pu()
+t1.goto(375, -230)
+t1.pd()
+t1.begin_fill()
+for i in range(6):
+    petal()
+    t1.left(360/6)
+t1.end_fill()
+
+t1.goto(379, -230)
+t1.color("white")
+t1.begin_fill()
+t1.circle(4)
+t1.end_fill()
+t1.hideturtle()
+
+
+def petal():
+    for i in range(2):
+        t1.circle(6, 110)
+        t1.left(70)
+t1.color("red")
+t1.pu()
+t1.goto(390, -245)
+t1.pd()
+t1.begin_fill()
+for i in range(6):
+    petal()
+    t1.left(360/6)
+t1.end_fill()
+
+t1.goto(394, -245)
+t1.color("yellow")
+t1.begin_fill()
+t1.circle(4)
+t1.end_fill()
+t1.hideturtle()
+
+
+def petal():
+    for i in range(2):
+        t1.circle(6, 110)
+        t1.left(70)
+t1.color("yellow")
+t1.pu()
+t1.goto(405, -235)
+t1.pd()
+t1.begin_fill()
+for i in range(6):
+    petal()
+    t1.left(360/6)
+t1.end_fill()
+
+t1.goto(409, -235)
+t1.color("white")
+t1.begin_fill()
+t1.circle(4)
+t1.end_fill()
+t1.hideturtle()
+
+
+def petal():
+    for i in range(2):
+        t1.circle(6, 110)
+        t1.left(70)
+t1.color("red")
+t1.pu()
+t1.goto(420, -250)
+t1.pd()
+t1.begin_fill()
+for i in range(6):
+    petal()
+    t1.left(360/6)
+t1.end_fill()
+
+t1.goto(424, -250)
+t1.color("yellow")
+t1.begin_fill()
+t1.circle(4)
+t1.end_fill()
+t1.hideturtle()
+
+
+def petal():
+    for i in range(2):
+        t1.circle(6, 110)
+        t1.left(70)
+t1.color("white")
+t1.pu()
+t1.goto(435, -235)
+t1.pd()
+t1.begin_fill()
+for i in range(6):
+    petal()
+    t1.left(360/6)
+t1.end_fill()
+
+t1.goto(439, -235)
+t1.color("yellow")
+t1.begin_fill()
+t1.circle(4)
+t1.end_fill()
+t1.hideturtle()
+
+
+def petal():
+    for i in range(2):
+        t1.circle(6, 110)
+        t1.left(70)
+t1.color("red")
+t1.pu()
+t1.goto(450, -245)
+t1.pd()
+t1.begin_fill()
+for i in range(6):
+    petal()
+    t1.left(360/6)
+t1.end_fill()
+
+t1.goto(454, -245)
+t1.color("yellow")
+t1.begin_fill()
+t1.circle(4)
+t1.end_fill()
+t1.hideturtle()
+
+
+def petal():
+    for i in range(2):
+        t1.circle(6, 110)
+        t1.left(70)
+t1.color("yellow")
+t1.pu()
+t1.goto(465, -250)
+t1.pd()
+t1.begin_fill()
+for i in range(6):
+    petal()
+    t1.left(360/6)
+t1.end_fill()
+
+t1.goto(469, -250)
+t1.color("white")
+t1.begin_fill()
+t1.circle(4)
+t1.end_fill()
+t1.hideturtle()
+###t1 295 -215 , 299,-215
 
 
         
